@@ -21,4 +21,4 @@ app.use(require("./routes/index"))
 app.use(require("./routes/compose"))
 
 
-app.listen(PORT, () => console.log("server listening")) 
+app.listen(PORT) 
