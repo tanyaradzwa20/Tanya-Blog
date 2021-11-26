@@ -1,7 +1,8 @@
+const PORT = process.env.PORT || 2000
+
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express()
-
 
 // connecting to mongo database  
 mongoose.connect("mongdb://localhost/tanya",{
@@ -20,4 +21,4 @@ app.use(require("./routes/index"))
 app.use(require("./routes/compose"))
 
 
-app.listen(2000, () => console.log("server listening")) 
+app.listen(PORT, () => console.log("server listening")) 
