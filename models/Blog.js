@@ -13,6 +13,8 @@ const BlogSchema = new mongoose.Schema({
         type: String,
         default: new Date().toString(),
     },
+    
 }) 
+const Blog = new mongoose.model("Blog", BlogSchema);
 
-module.export = new mongoose.model("Blog", BlogSchema)
+module.export = Blog();
