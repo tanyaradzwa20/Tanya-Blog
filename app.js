@@ -5,10 +5,10 @@ const mongoose = require("mongoose");
 const app = express()
 
 // connecting to mongo database  
-mongoose.connect("mongodb+srv://tanyaradzwa:<tanyaradzwa2001>@tanyablog.edblq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",{
+mongoose.connect("mongodb+srv://tanyaradzwa:tanyaradzwa2001@tanyablog.edblq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",{
     userNewUrlParser: true,
     useUnifiedTopology: true},
-    () => {console.log("connected data database was successful")}
+    () => {console.log("connect to database was successful")}
 );
 
 //  middleware

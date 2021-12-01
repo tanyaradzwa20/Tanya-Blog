@@ -1,7 +1,9 @@
-const router = require("express").Router()
+const router = require("express").Router();
+const Blog = require("../models/Blog");
 
-router.get("/", (req, res) => {
-    res.render("index")
+router.get("/", async (req, res) => {
+        const allBlogs = await Blog.find();
+        res.render("index", {blogs: allBlogs})
 })
 
 
