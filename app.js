@@ -1,18 +1,22 @@
-const PORT = process.env.PORT || 5000
-
+const PORT = process.env.PORT || 3000
 const express = require("express");
 const mongoose = require("mongoose");
+var bodyParser = require('body-parser')
 const app = express()
 
-// connecting to mongo database  
-mongoose.connect("mongodb+srv://tanyaradzwa:tanyaradzwa2001@tanyablog.edblq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",{
-    userNewUrlParser: true,
-    useUnifiedTopology: true},
-    () => {console.log("connect to database was successful")}
-);
 
+const pepeMongoURI = 
+"dbRUI=mongodb+srv://pepe:lz7t71jKIxae76zG@uncommondb.tuzcs.mongodb.net/UncommonDB?retryWrites=true&w=majority"
+// connecting to mongo database  
+mongoose.connect(pepeMongoURI)
+    .then((result)=>{
+        app.listen(PORT)
+        console.log("database connected") 
+    })
+    .catch(err=> console.log(err))
+    
 //  middleware
-app.use(express.urlencoded({extended: true}) )
+app.use(bodyParser.urlencoded({extended: true}) )
 app.use(express.static("public"))
 app.set("view engine", "ejs")
 
@@ -21,4 +25,3 @@ app.use(require("./routes/index"))
 app.use(require("./routes/compose"))
 
 
-app.listen(PORT) 
