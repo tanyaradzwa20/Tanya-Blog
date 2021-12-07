@@ -2,14 +2,18 @@
 <%- include("./partials/navbar") %>
 
 <div class="container">
-    <h1>All Blogs </h1>
+    <% blogs.reverse() %>
+
     <% blogs.forEach(blog =>{ %>
-        <div class="card mt-5" style="width: 18rem;">
+        <div class="card mt-5">
             <div class="card-body">
-              <p class="text-muted"><%= blog.postedAt%> </p>
-              <h5 class="card-title"> <%= blog.title%> </h5>
-              <p class="card-text"><%= blog.content%> </p>
-              <a href="#" class="btn btn-primary">Read More...</a>
+              <img class="mb-3" style="width:50%;object-fit:contain" src="/images/cards.jpeg" alt="nature-logo">
+              <p class=" posted"><%= blog.postedAt %> </p>
+              <h5 class="card-title"> <%= blog.title %> </h5>
+              <p class="card-text"><%= blog.content %> </p>
+              <a href="/blog/<%= blog._id %>" class="btn ">Read More...</a>
+              <a href=" /delete/<%= blog._id %>" class="btn ">Delete</a>
+              <a href=" /edit/<%= blog._id %>" class="btn ">Edit</a>
             </div>
         </div>
     <% })%>

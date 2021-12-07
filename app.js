@@ -18,10 +18,11 @@ mongoose.connect(pepeMongoURI,{useNewUrlParser: true, useUnifiedTopology: true})
 
 //  middleware
 app.use(bodyParser.urlencoded({extended: true}) )
-app.use(express.static("public"))
+app.use(express.static('public'))
 app.set("view engine", "ejs")
 
 //  routes
 app.use(require("./routes/index"))
 app.use(require("./routes/compose"))
+app.use(require("./routes/blog"))
 

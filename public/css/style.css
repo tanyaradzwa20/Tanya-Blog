@@ -1,0 +1,96 @@
+
+
+
+.navbar{
+    background-color: green;
+}
+.nav-link{
+font-size: 20px;
+color: white;
+}
+
+.nav-link:hover{
+    color: greenyellow;
+}
+
+input, textarea{
+    border: 1px solid green!important;
+    border-radius: inherit!important;
+    
+}
+input, textarea:focus{
+    outline: none!important;
+    box-shadow: none!important;
+    color:green!important
+}
+.navbar-toggler{
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-toggler-icon{
+    background-color: white!important;
+    height: 3px;
+   
+}
+
+h3{
+    color: green;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.btn{
+    border:1px solid green!important;
+    border-radius: 5px;
+    color: green;
+    width: 150px;
+    height: 40px;
+    margin: 0 5px 0 0;
+}
+
+/* .btn:hover{
+    color: white;
+    background-color: green;
+} */
+
+::placeholder{
+    color: black!important;
+}
+
+::placeholder:focus{
+    color: green!important;
+}
+
+.formBody{
+    background-color: green;
+    padding: 30px;
+}
+
+.form-inner{
+    background-color: white;
+    padding: 30px;
+}
+
+.footer-text{
+    font-size: 12px;
+    margin: 50px 0 20px 0;
+}
+
+.card{
+    border:none;
+}
+.posted{
+    font-size: 12px;
+    color: black;
+}
+
+.card-title{
+    text-transform: capitalize;
+}
+
+.card-text{
+    font-size: 16px;
+    color: black;
+    text-transform: capitalize;
+}
