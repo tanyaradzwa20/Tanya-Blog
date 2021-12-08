@@ -10,7 +10,11 @@
               <img class="mb-3" style="width:50%;object-fit:contain" src="/images/cards.jpeg" alt="nature-logo">
               <p class=" posted"><%= blog.postedAt %> </p>
               <h5 class="card-title"> <%= blog.title %> </h5>
-              <p class="card-text"><%= blog.content %> </p>
+            
+              <% let longContent = blog.content %>
+              <% let shortContent = longContent.slice(0 , 10)%>
+
+              <p class="card-text"><%= shortContent %> </p>
               <a href="/blog/<%= blog._id %>" class="btn ">Read More...</a>
               <a href=" /delete/<%= blog._id %>" class="btn ">Delete</a>
               <a href=" /edit/<%= blog._id %>" class="btn ">Edit</a>
