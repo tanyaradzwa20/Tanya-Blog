@@ -13,7 +13,10 @@ const BlogSchema = new mongoose.Schema({
         type: String,
         default: new Date().toString(),
     },
-    
+    image:{
+        data:Buffer,
+        contentType:String
+    }
 }) 
 const Blog = mongoose.model("Blog", BlogSchema);
 

@@ -94,3 +94,14 @@ h3{
     color: black;
     text-transform: capitalize;
 }
+
+#image{
+    border: none!important;
+    margin: 15px 0 50px 0;
+}
+
+.image-label{
+    color: green;
+    font-size: 25px;
+
+}

@@ -28,9 +28,9 @@ const Blog = require("../models/Blog");
 
   .post("/edit/:id", (req, res) => {
     const { id } = req.params;
-    const { title, content } = req.body;
+    const { title, content, image } = req.body;
 
-    Blog.updateOne({ _id: id }, { title, content })
+    Blog.updateOne({ _id: id }, { title, content, image })
       .then(() => {
         console.log("successfully! updated the blog!");
         res.redirect("/");

@@ -4,10 +4,14 @@
 <div class="formBody container mt-5 ">
     <div class="form-inner ">
             <h3>Start Your Blog</h3>
-            <form action="/compose" method="POST">
+            <form action="/compose" method="POST" enctype="multipart/formdata">
                 <input type="text" name="title" class="form-control" placeholder="Enter Title" required>
                 <textarea name="content" placeholder="Enter Content Here" rows="8" class="mt-3 form-control" required></textarea>
                 <br>
+                <div class="form-group">
+                    <label for="image" class="image-label"> Upload An Image</label> <br>
+                    <input type="file" name="image" id="image" class="form-control-file">
+                </div>
                 <input type="submit"  class="btn" value="Compose">
             </form>
     </div>

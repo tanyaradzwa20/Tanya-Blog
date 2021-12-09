@@ -7,7 +7,7 @@
     <% blogs.forEach(blog =>{ %>
         <div class="card mt-5">
             <div class="card-body">
-              <img class="mb-3" style="width:50%;object-fit:contain" src="/images/cards.jpeg" alt="nature-logo">
+              <img class="mb-3 img-fluid" src="/images/<%= blog.image%>" >
               <p class=" posted"><%= blog.postedAt %> </p>
               <h5 class="card-title"> <%= blog.title %> </h5>
             
