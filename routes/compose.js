@@ -8,7 +8,7 @@ const urlencodedParser = bodyParser.urlencoded({extended:false})
 // const upload = multer({dest: 'images/'});
 const storage =  multer.diskStorage({
     // destination for files
-    destination: 'uploads',
+    destination: './public/images',
     // add extension
     filename : function(request, file, callback){
         callback(null, Date.now() + file.fieldname + path.extname(file.originalname))
@@ -21,7 +21,7 @@ const upload = multer({
    }) 
    .single('image')
 
-router.post('/uploads', (req, res) => {
+router.post('/images', (req, res) => {
     upload(req, res, (err) =>{
         if (!req.file) {
             console.log("No file received");

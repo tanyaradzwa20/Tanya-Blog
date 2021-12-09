@@ -7,7 +7,7 @@
     <% blogs.forEach(blog =>{ %>
         <div class="card mt-5">
             <div class="card-body">
-              <img class="mb-3 img-fluid" src="/images/<%= blog.image%>" >
+              <img class="mb-3 img-fluid" src="./public/images/<%= blog.image%>" >
               <p class=" posted"><%= blog.postedAt %> </p>
               <h5 class="card-title"> <%= blog.title %> </h5>
             
@@ -15,9 +15,12 @@
               <% let shortContent = longContent.slice(0 , 10)%>
 
               <p class="card-text"><%= shortContent %> </p>
-              <a href="/blog/<%= blog._id %>" class="btn ">Read More...</a>
-              <a href=" /delete/<%= blog._id %>" class="btn ">Delete</a>
-              <a href=" /edit/<%= blog._id %>" class="btn ">Edit</a>
+              <div class="btn-body d-sm-flex">
+                <a href="/blog/<%= blog._id %>" class="btn ">Read More...</a>
+                <a href=" /delete/<%= blog._id %>" class="btn ">Delete</a>
+                <a href=" /edit/<%= blog._id %>" class="btn ">Edit</a>
+              </div>
+             
             </div>
         </div>
     <% })%>
