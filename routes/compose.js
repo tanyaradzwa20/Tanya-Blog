@@ -8,7 +8,7 @@ const urlencodedParser = bodyParser.urlencoded({extended:false})
 // const upload = multer({dest: 'images/'});
 const storage =  multer.diskStorage({
     // destination for files
-    destination: './public/images',
+    destination: 'public/images',
     // add extension
     filename : function(request, file, callback){
         callback(null, Date.now() + file.fieldname + path.extname(file.originalname))

@@ -2,7 +2,7 @@
 
 
 .navbar{
-    background-color: green;
+    background-color: rgb(255, 180, 41);
 }
 .nav-link{
 font-size: 20px;
@@ -104,4 +104,31 @@ h3{
     color: green;
     font-size: 25px;
 
+}
+
+
+.billboard{
+    display: flex;
+    position: relative;
+}
+.billboard-text{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  
+}
+
+.billboard-img{
+ object-fit: contain;
+ height: 100%;
+ width: 25%;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 99%;
+    background-color: rgba(255, 180, 41, 0.418);
 }

@@ -1,5 +1,6 @@
 <%- include("./partials/header") %>
 <%- include("./partials/navbar") %>
+<%- include("./partials/billboard") %>
 
 <div class="container">
     <% blogs.reverse() %>
@@ -7,7 +8,7 @@
     <% blogs.forEach(blog =>{ %>
         <div class="card mt-5">
             <div class="card-body">
-              <img class="mb-3 img-fluid" src="./public/images/<%= blog.image%>" >
+              <img class="mb-3 img-fluid" src="./images/<%= blog.image%>" >
               <p class=" posted"><%= blog.postedAt %> </p>
               <h5 class="card-title"> <%= blog.title %> </h5>
             
