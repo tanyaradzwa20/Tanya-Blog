@@ -26,7 +26,7 @@ const Blog = require("../models/Blog");
     res.render("editBlog", { blog: getData });
   })
 
-  .post("/edit/:id", (req, res) => {
+  router.post("/edit/:id", (req, res) => {
     const { id } = req.params;
     const { title, content, image } = req.body;
 
