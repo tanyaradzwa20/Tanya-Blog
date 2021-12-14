@@ -3,28 +3,27 @@
 <%- include("./partials/billboard") %>
 
 <div class="container">
+  <div class="row">
     <% blogs.reverse() %>
 
     <% blogs.forEach(blog =>{ %>
+      <div class="col-md-4">
         <div class="card mt-5">
-            <div class="card-body">
-              <img class="mb-3 img-fluid" src="./images/<%= blog.image%>" >
+              <img class="mb-3 img-fluid" src="./images/bill1.jpeg" >
               <p class=" posted"><%= blog.postedAt %> </p>
               <h5 class="card-title"> <%= blog.title %> </h5>
             
               <% let longContent = blog.content %>
-              <% let shortContent = longContent.slice(0 , 10)%>
+              <% let shortContent = longContent.slice(0 , 40)%>
 
               <p class="card-text"><%= shortContent %> </p>
-              <div class="btn-body d-sm-flex">
-                <a href="/blog/<%= blog._id %>" class="btn ">Read More...</a>
-                <a href=" /delete/<%= blog._id %>" class="btn ">Delete</a>
-                <a href=" /edit/<%= blog._id %>" class="btn ">Edit</a>
+              <div class="btn-body ">
+                 <a href="/blog/<%= blog._id %>" class="btn ">Read More...</a>
               </div>
-             
-            </div>
         </div>
+      </div>
     <% })%>
+  </div>
 </div>
 
 <%- include("./partials/footer") %>

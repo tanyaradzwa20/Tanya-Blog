@@ -1,9 +1,9 @@
 <%- include("./partials/header") %>
 <%- include("./partials/navbar") %>
+<%- include("./partials/billboard2") %>
 
 <div class="container formBody mt-5">
     <div class="form-inner">
-        <h3 class="my-3">Edit Your Blog Here </h3>
         <form action="/edit/<%= blog._id %>" method="POST">
             <input type="text" value="<%= blog.title %>" name="title" placeholder="Enter Title" class="form-control" required>
             <textarea name="content" class="mt-3 form-control" placeholder="Enter Content Here..." required><%= blog.content %></textarea>

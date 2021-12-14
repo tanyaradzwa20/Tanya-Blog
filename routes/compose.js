@@ -8,7 +8,7 @@ const urlencodedParser = bodyParser.urlencoded({extended:false})
 // const upload = multer({dest: 'images/'});
 const storage =  multer.diskStorage({
     // destination for files
-    destination: 'public/images',
+    destination: 'uploads',
     // add extension
     filename : function(request, file, callback){
         callback(null, Date.now() + file.fieldname + path.extname(file.originalname))
@@ -39,9 +39,6 @@ router.post('/images', (req, res) => {
     })
    
   });
-
-
-
 
 // adding blogs and title
 router.post("/compose", urlencodedParser, (req,res) =>{
