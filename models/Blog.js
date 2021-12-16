@@ -14,8 +14,7 @@ const BlogSchema = new mongoose.Schema({
         default: new Date().toString(),
     },
     image:{
-        data:Buffer,
-        contentType:String
+       type:String
     }
 }) 
 const Blog = mongoose.model("Blog", BlogSchema);

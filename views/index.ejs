@@ -9,7 +9,7 @@
     <% blogs.forEach(blog =>{ %>
       <div class="col-md-4">
         <div class="card mt-5">
-              <img class="mb-3 img-fluid" src="./images/bill1.jpeg" >
+              <img class="mb-3 img-fluid" src="public/uploads/<%= blog.image %>" >
               <p class=" posted"><%= blog.postedAt %> </p>
               <h5 class="card-title"> <%= blog.title %> </h5>
             
@@ -23,6 +23,8 @@
         </div>
       </div>
     <% })%>
+    <img src="/images/img5.png" class="home-img">
+
   </div>
 </div>
 

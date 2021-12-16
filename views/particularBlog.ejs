@@ -1,9 +1,10 @@
 <%- include("./partials/header") %>
 <%- include("./partials/navbar") %>
+<img src="/images/img5.png" class="home-img">
 
 <div class="container mt-5">
     <p class="mb-3"><%= blog.postedAt %> </p>
-    <img src="/images/bill3.jpeg" class="particular-img"/>
+    <img src="<%= blog.image %>" class="particular-img"/>
     <h5 class="card-title mb-2 mt-2"> <%= blog.title %> </h5>
     <p class="card-text"><%= blog.content %> </p>
     <a href=" /delete/<%= blog._id %>" class="btn ">Delete</a>
