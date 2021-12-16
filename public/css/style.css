@@ -16,7 +16,7 @@ body {
 }
 
 .navbar-brand{
-    width: 30%;
+    width: 20%;
     }
 
    .navbar-brand img{
@@ -26,10 +26,22 @@ body {
    } 
 
    .navline{
-       height: 2px;
        width: 35%;
-       background: white;
    }
+
+.nav-icons{
+    justify-content: flex-end;
+}
+
+.nav-icons a{
+   margin: 0 15px;
+   color: black;
+   font-size: 25px;
+}
+.nav-icons a:hover{
+    color: white;
+}
+
 .nav-link{
 font-size: 20px;
 color: black;
@@ -178,7 +190,7 @@ h3{
   footer .icons a {
     color: #999797;
     font-size: 20px;
-    margin: 15px;
+    margin: 20px;
   }
   
   footer .icons a:hover {
@@ -210,6 +222,7 @@ h3{
     color: #999797;
     line-height: 1.3;
     margin: 15px;
+    font-size: 8px;
   }
   
 
@@ -259,9 +272,7 @@ h3{
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767px) { 
-    .small-img{
-        width:50%
-    }
+   
     .billboard-inner{
         margin: 15px 0;
     }
@@ -293,6 +304,9 @@ h3{
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199px) { 
 .billboard{
-    height:28vh
+    height:27vh
+}
+.small-img{
+    width:30%
 }
 }
