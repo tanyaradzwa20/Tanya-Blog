@@ -8,10 +8,10 @@ const path = require('path');
 
 const storage =  multer.diskStorage({
     // destination for files
-    destination: './public/uploads/',
+    destination: './public/uploads',
     // add extension
     filename : function(request, file, callback){
-        callback(null, Date.now() + file.fieldname + path.extname(file.originalname))
+        callback(null, Date.now() + file.originalname)
     },
 });
 
@@ -19,18 +19,18 @@ const upload = multer({
     storage:storage	})
 
 // adding blogs and title
-router.post("/compose", upload.single('pepeImage'), (req,res) => {
-    // console.log(req.body, req.file);
-    
-    const {title, content, image} = req.body;
-    if(!title || !content ) 
-        return  res.send("Please enter all details")
+router.post("/compose", upload.single('Image'), (req,res) => {
+    console.log(req.body);
+    // const {title, content, image} = req.body;
+    // if(!title || !content ) 
+    //     return  res.send("Please enter all details")
 
     const blog = new Blog(
-        {title:title, 
-         content:content,
-         image:image
+        {title:req.body.title, 
+         content:req.body.content,
+         image:req.file.filename,
         });
+        
     blog.save()
         .then(()=>{
             console.log("Blog Saved");
