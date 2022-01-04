@@ -7,7 +7,7 @@ const app = express()
 // const tanyaMongoURI = "mongodb+srv://tanyaradzwa:tanyaradzwa2001@tanyablog.edblq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 const pepeMongoURI = "dbRUI=mongodb+srv://pepe:lz7t71jKIxae76zG@uncommondb.tuzcs.mongodb.net/UncommonDB?retryWrites=true&w=majority"
 
-// connecting to mongo database  
+// // connecting to mongo database  
 mongoose.connect(pepeMongoURI,{useNewUrlParser: true, useUnifiedTopology: true})
     .then((result) => {
         app.listen(PORT)

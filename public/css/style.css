@@ -5,6 +5,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+
 .home-img{
     position: absolute;
     z-index: -1;
@@ -53,8 +54,10 @@ margin-left: 20px;
 }
 
 input, textarea{
-    border: 1px solid orange!important;
+    /* border: 1px solid orange!important; */
     border-radius: inherit!important;
+    border: none!important;
+    border-bottom: 1px solid grey!important;
     
 }
 input, textarea:focus{
@@ -96,17 +99,34 @@ h3{
     color: black!important;
 }
 
-
+span{
+    color: orange;
+}
 
 .formBody{
-    background-color: orange;
-    padding: 15px;
+    background-image:
+    linear-gradient( rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.712)),
+    url('/images/matetsi5.jpg');    
+    padding: 25px;
+    color:white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;
 }
 
 .form-inner{
     background-color: white;
     padding: 30px;
 }
+
+.form-inner h2{
+    color:black;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
 
 .footer-text{
     font-size: 12px;
@@ -138,7 +158,8 @@ h3{
 
 #image{
     border: none!important;
-    margin: 15px 0 50px 0;
+    color:orange!important;
+
 }
 
 .image-label{
@@ -224,6 +245,8 @@ h3{
     margin: 15px;
     font-size: 8px;
   }
+
+  
   
 
 
