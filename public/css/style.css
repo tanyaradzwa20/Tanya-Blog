@@ -126,7 +126,22 @@ span{
     margin-bottom: 15px;
 }
 
+.blog-img{
+    height: 250px;
+}
 
+.particular-img{
+    width: 70%;
+}
+
+.card-title{
+    font-weight: bold;
+    color: black;
+}
+
+.particular-topic{
+color: orange;
+}
 
 .footer-text{
     font-size: 12px;
@@ -138,8 +153,8 @@ span{
     padding: 15px;
     border-radius: 0;
     box-shadow: 1px 1px 15px rgba(255, 166, 0, 0.322);
-
 }
+
 .posted{
     font-size: 12px;
     color: black;
@@ -159,13 +174,11 @@ span{
 #image{
     border: none!important;
     color:orange!important;
-
 }
 
 .image-label{
     color: black;
     font-size: 25px;
-
 }
 
 .billboard {
@@ -186,12 +199,7 @@ span{
     margin-bottom: 15px;
     font-size: 45px;
   }
-
-  .particular-img{
-      width: 550px;
-  }
   
-
   footer {
     background: rgba(0, 0, 0, 0.925);
     text-align: center;
