@@ -3,9 +3,10 @@
 <%- include("./partials/billboard") %>
 
 <div class="container">
-  <img src="/images/img5.png" class="home-img">
 
   <img class="billboard-img" src="/images/matetsi5.jpg" />
+  <img src="/images/img5.png" class="home-img d-none d-sm-block">
+
   <div class="row">
     <% blogs.reverse() %>
 
@@ -17,7 +18,7 @@
               <h5 class="card-title"> <%= blog.title %> </h5>
             
               <% let longContent = blog.content %>
-              <% let shortContent = longContent.slice(0 , 40)%>
+              <% let shortContent = longContent.slice(0 , 60)%>
 
               <p class="card-text"><%= shortContent %> </p>
               <div class="btn-body ">

@@ -132,6 +132,8 @@ span{
 
 .particular-img{
     width: 70%;
+    height: 500px;
+    object-fit: cover;
 }
 
 .card-title{
@@ -267,6 +269,12 @@ color: orange;
 
 
 @media (max-width: 575px) {
+    .particular-img{
+        height: auto;
+        width: 100%;
+    }
+
+    
     .billboard-img {
         height: auto;}
 
@@ -313,7 +321,11 @@ color: orange;
     .billboard-img {
         height: auto;}
         
-
+        .particular-img{
+            height: auto;
+            width: 100%;
+        }
+    
     .billboard-inner{
         margin: 15px 0;
     }
@@ -350,4 +362,5 @@ color: orange;
 .small-img{
     width:30%
 }
+
 }
