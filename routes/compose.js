@@ -21,10 +21,7 @@ const upload = multer({
 // adding blogs and title
 router.post("/compose", upload.single('Image'), (req,res) => {
     console.log(req.body);
-    // const {title, content, image} = req.body;
-    // if(!title || !content ) 
-    //     return  res.send("Please enter all details")
-
+ 
     const blog = new Blog(
         {title:req.body.title, 
          content:req.body.content,
